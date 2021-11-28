@@ -18,7 +18,7 @@ public class NewPhoneCreater {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     js = (JavascriptExecutor) wd;
-    login();
+    login(new Login("admin", "secret"));
   }
 
   @Test
@@ -87,14 +87,14 @@ public class NewPhoneCreater {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  private void login() {
+  private void login(Login login) {
     wd.get("http://localhost/addressbook/");
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
-    wd.findElement(By.name("user")).sendKeys("admin");
+    wd.findElement(By.name("user")).sendKeys(login.getUser());
     wd.findElement(By.name("pass")).click();
     wd.findElement(By.name("pass")).clear();
-    wd.findElement(By.name("pass")).sendKeys("secret");
+    wd.findElement(By.name("pass")).sendKeys(login.getPassword());
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
