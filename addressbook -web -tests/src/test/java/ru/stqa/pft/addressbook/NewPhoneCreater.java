@@ -21,6 +21,9 @@ public class NewPhoneCreater {
     login("admin", "secret");
   }
 
+  /**
+   * Задание 4 , создан тест на добавление клиента
+   **/
   @Test
   public void testUntitledTestCase() throws Exception {
 
@@ -101,7 +104,7 @@ public class NewPhoneCreater {
   @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
     wd.quit();
-   
+
   }
 
   private boolean isElementPresent(By by) {
@@ -121,5 +124,5 @@ public class NewPhoneCreater {
       return false;
     }
   }
-  
+
 }
