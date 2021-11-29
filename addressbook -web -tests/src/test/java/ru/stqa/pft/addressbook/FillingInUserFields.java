@@ -1,13 +1,13 @@
 package ru.stqa.pft.addressbook;
 
-public class PhoneCreator {
+public class FillingInUserFields {
   private final String name;
   private final String middlename;
   private final String lastname;
   private final String nickname;
-  private final String home;
-  private final String mobile;
-  private final String work;
+  private final String homePhone;
+  private final String mobilePhone;
+  private final String workPhone;
   private final String fax;
   private final String email;
   private final String bday;
@@ -17,14 +17,14 @@ public class PhoneCreator {
   private final String phone2;
   private final String notes;
 
-  public PhoneCreator(String name, String middlename, String lastname, String nickname, String home, String mobile, String work, String fax, String email, String bday, String bmonth, String byear, String address2, String phone2, String notes) {
+  public FillingInUserFields(String name, String middlename, String lastname, String nickname, String homePhone, String mobilePhone, String workPhone, String fax, String email, String bday, String bmonth, String byear, String address2, String phone2, String notes) {
     this.name = name;
     this.middlename = middlename;
     this.lastname = lastname;
     this.nickname = nickname;
-    this.home = home;
-    this.mobile = mobile;
-    this.work = work;
+    this.homePhone = homePhone;
+    this.mobilePhone = mobilePhone;
+    this.workPhone = workPhone;
     this.fax = fax;
     this.email = email;
     this.bday = bday;
@@ -51,16 +51,16 @@ public class PhoneCreator {
     return nickname;
   }
 
-  public String getHome() {
-    return home;
+  public String getHomePhone() {
+    return homePhone;
   }
 
-  public String getMobile() {
-    return mobile;
+  public String getMobilePhone() {
+    return mobilePhone;
   }
 
-  public String getWork() {
-    return work;
+  public String getWorkPhone() {
+    return workPhone;
   }
 
   public String getFax() {
