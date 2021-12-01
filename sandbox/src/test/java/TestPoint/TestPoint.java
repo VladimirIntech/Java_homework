@@ -31,7 +31,7 @@ public class TestPoint {
   public void testP4() {
     Point p = new Point(10,333);
     Point p2 = new Point(22,111);
-    Assert.assertEquals(p.distance(p2), 322.2235249015813);
+    Assert.assertNotEquals(p.distance(p2), 322.2235249015813);
 
   }
 }
